@@ -7,8 +7,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
       ##Added by Noah Wagnon on 12/26/2019
-      #t.string :created_at,         null: false, default: ""
-      #t.string :updated_at,         null: false, default: ""
       t.string :first_name,         null: false, default: ""
       t.string :last_name,         null: false, default: ""
       t.string :graduation,         null: false, default: ""
