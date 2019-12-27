@@ -13,34 +13,12 @@
 ActiveRecord::Schema.define(version: 2019_12_27_182436) do
 
   create_table "applications", force: :cascade do |t|
+    t.integer "user_id", default: 0, null: false
+    t.integer "application_year", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "status"
     t.integer "skill_level"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "first_name", default: "", null: false
-    t.string "last_name", default: "", null: false
-    t.string "graduation", default: "", null: false
-    t.string "dietary_restrictions", default: "", null: false
-    t.string "special_needs", default: "", null: false
-    t.string "date_of_birth", default: "", null: false
-    t.string "phone_number", default: "", null: false
-    t.string "school", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "level_of_study"
-    t.integer "gender"
-    t.integer "shirt_size"
-    t.integer "major"
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
 end
