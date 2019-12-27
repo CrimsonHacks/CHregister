@@ -1,10 +1,13 @@
 class User < ApplicationRecord
+  has_many :applications
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  
   enum level_of_study: [:High_School, :Freshman, :Sophomore, :Junior, :Senior, :Grad_Student]
   enum gender: [:Female, :Male, :Non_binary, :Prefer_not_to_say, :other]
+
   enum shirt_size: [:women_xxs, :women_xs, :women_s, :women_m, :women_l, :women_xl, :women_xxl, 
   :unisex_xxs, :unisex_xs, :unisex_s, :unisex_m, :unisex_l, :unisex_xl, :unisex_xxl]
   
