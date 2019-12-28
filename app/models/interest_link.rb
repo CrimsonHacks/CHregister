@@ -1,0 +1,2 @@
+class InterestLink < ApplicationRecord
+end
